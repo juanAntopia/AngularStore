@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
+import { Product } from './interface/product.interface';
 import { ProductsService } from './services/products.service';
 
 @Component({
@@ -9,12 +10,14 @@ import { ProductsService } from './services/products.service';
 })
 export class ProductsComponent implements OnInit {
 
+  products!: Product[];
+
   constructor(private productSrv: ProductsService) { }
 
   ngOnInit(): void {
     this.productSrv.getProducts()
     .pipe(
-     tap(res => console.log(res))
+      tap((products: Product[]) => this.products = products)
     )
     .subscribe()
   }
