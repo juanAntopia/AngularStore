@@ -6,6 +6,7 @@ import { ProductsComponent } from './products.component';
 import { ProductComponent } from './product/product.component';
 import { MaterialModule } from 'src/app/material.module';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     ProductsRoutingModule,
     MaterialModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class ProductsModule { }

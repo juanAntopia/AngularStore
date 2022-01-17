@@ -1,0 +1,20 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  max-width: 400px;
+  min-width: 400px;
+  border-radius: 0;
+  height: 100%;
+  min-height: 180px;
+  margin: 5px;
+}
+
+button {
+  width: 100%;
+}
