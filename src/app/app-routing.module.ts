@@ -5,6 +5,7 @@ import { JuanComponent } from './pages/juan/juan.component';
 const routes: Routes = [
   {path: 'juan', component: JuanComponent},
   { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
+  { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
